@@ -5,12 +5,15 @@ frame()
 labels <- c('Before Normalization', 'After Normalization', 'After PCA')
 cols <- c('red','blue','black')
 
-x1 <- c(1,4)
-x2 <- c(11,4)
-x3 <- c(1,2)
-x4 <- c(11,2)
+## Input from Direct
+#x1 <- c(3,2)
+#x2 <- c(3,4)
+#x3 <- c(5,4)
+#x4 <- c(5,6)
+#X <- cbind(x1, x2, x3, x4)
 
-X <- cbind(x1, x2, x3, x4)
+## Input from Data-File
+X <- matrix(scan('./data.txt', sep=','), 2)
 
 # 正規化前にプロットする
 maxX <- max(abs(X[1,]))
